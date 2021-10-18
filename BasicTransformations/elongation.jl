@@ -10,9 +10,8 @@ end
 
 for a = 100:1:133
     new_a = a*0.01
-    my_new_func(x) = new_a * my_func(x)
     Plots.plot(
-        my_new_func, -5:0.1:5, leg = false, 
+        x -> new_a*my_func(x), -5:0.1:5, leg = false, 
         xlims = (-5, 5), ylims = (-5, 5), 
         ratio=1,
         xtick=-4:1:4, ytick=-4:1:4,
